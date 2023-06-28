@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style2.css">
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+  <h1>Memory Game</h1>
+  <div class="game-board"></div>
+  <div style="margin: auto;padding:50px ;  text-align: center;">
+    <h2 style="color: black;" id="playerName">Player Name</h2>
+    <input id="playerNameinput" type="text" />
+  </div>
+  
+  </div>
+    <div class="controls">
+    <a href="./secondpage.html"><button class="start_button">Start</button> </a>
+    </div>
+
+
+    <div class="board_elements">
+      <div class="board" data-dimension="4"></div>
+      <div class="win">You won!</div>
+    </div>
+  </div>
+</body>
+
+<script>
+
+ const nme =  document.querySelector('#playerNameinput');
+const btn = document.querySelector('.controls');
+ btn.addEventListener('click', (() => {
+  console.log(nme.value);
+   localStorage.setItem("player_name", nme.value );
+
+ }))
+
+ 
+</script>
+</html>
